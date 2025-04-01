@@ -1,0 +1,63 @@
+/* LoadingSpinner.css - YouTube-style loading spinner */
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    color: #606060;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+  
+  .loading-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #FF0000; /* YouTube red */
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 16px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading-message {
+    font-size: 14px;
+    margin: 0;
+    color: #606060;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 480px) {
+    .loading-container {
+      padding: 24px;
+    }
+    
+    .loading-spinner {
+      width: 28px;
+      height: 28px;
+      border-width: 2px;
+    }
+    
+    .loading-message {
+      font-size: 13px;
+    }
+  }
+  
+  /* For full-page loading */
+  .loading-container.full-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+  }
+  

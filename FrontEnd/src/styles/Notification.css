@@ -1,0 +1,95 @@
+/* Notification.css - YouTube-style notification banner */
+
+.notification {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    font-family: 'Roboto', sans-serif;
+    min-width: 280px;
+    max-width: 90%;
+    text-align: center;
+    animation: slide-up 0.3s ease-out forwards;
+  }
+  
+  .notification p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  /* Success notification (green) */
+  .notification.success {
+    background-color: #40a340;
+    color: white;
+  }
+  
+  /* Error notification (red) */
+  .notification.error {
+    background-color: #f91818; /* YouTube red */
+    color: white;
+  }
+  
+  /* Info notification (blue) */
+  .notification.info {
+    background-color: #065fd4; /* YouTube blue */
+    color: white;
+  }
+  
+  /* Warning notification (yellow) */
+  .notification.warning {
+    background-color: #ffc107;
+    color: #212121;
+  }
+  
+  /* Animation for appearing */
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 20px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  /* Animation for disappearing */
+  .notification.hide {
+    animation: slide-down 0.3s ease-in forwards;
+  }
+  
+  @keyframes slide-down {
+    from {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+    to {
+      opacity: 0;
+      transform: translate(-50%, 20px);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .notification {
+      bottom: 16px;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .notification {
+      bottom: 12px;
+      padding: 8px 16px;
+      min-width: 240px;
+    }
+    
+    .notification p {
+      font-size: 13px;
+    }
+  }

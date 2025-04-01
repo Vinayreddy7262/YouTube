@@ -1,0 +1,138 @@
+/* client/src/styles/CreateChannelPage.css */
+.create-channel-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .create-channel-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .create-channel-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    background-color: #ffe6e6;
+    color: #d32f2f;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .create-channel-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-preview {
+    margin-bottom: 20px;
+  }
+  
+  .preview-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .preview-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  .preview-info {
+    flex: 1;
+  }
+  
+  .preview-name-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .preview-handle {
+    color: #666;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .form-group textarea,
+  .form-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .char-count,
+  .field-hint {
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .cancel-btn,
+  .create-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .cancel-btn {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .create-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .create-btn:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .terms-notice {
+    color: #888;
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+  }

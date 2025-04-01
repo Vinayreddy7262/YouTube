@@ -1,0 +1,21 @@
+/* client/src/index.css */
+:root {
+  --primary-color: #ff0000; /* YouTube red */
+  --secondary-color: #065fd4; /* YouTube blue */
+  --background-color: #f9f9f9;
+  --dark-background: #181818;
+  --text-color: #030303;
+  --secondary-text-color: #606060;
+  --border-color: #e5e5e5;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Add YouTube font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');

@@ -1,0 +1,318 @@
+/* Header.css - YouTube-like styling */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 56px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 16px;
+    color: #606060;
+  }
+  
+  .hamburger-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #212121;
+  }
+  
+  .youtube-icon {
+    color: #FF0000;
+    font-size: 24px;
+    margin-right: 4px;
+  }
+  
+  .logo span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+  }
+  
+  .search-form {
+    display: flex;
+    flex: 1;
+    max-width: 640px;
+    margin: 0 40px;
+  }
+  
+  .search-form input {
+    flex: 1;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px 0 0 2px;
+    font-size: 16px;
+  }
+  
+  .search-form input:focus {
+    border-color: #1c62b9;
+    outline: none;
+  }
+  
+  .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 40px;
+    background-color: #f8f8f8;
+    border: 1px solid #d3d3d3;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    color: #606060;
+  }
+  
+  .search-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .upload-btn, .notification-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #606060;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  .upload-btn:hover, .notification-icon:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .user-menu {
+    position: relative;
+    margin-left: 8px;
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    padding: 8px 0;
+    margin-top: 8px;
+  }
+  
+  .user-menu:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu a, .dropdown-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    color: #212121;
+    text-decoration: none;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu a:hover, .dropdown-menu button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .signin-btn {
+    display: flex;
+    align-items: center;
+    color: #3ea6ff;
+    border: 1px solid #3ea6ff;
+    background: none;
+    padding: 8px 12px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .signin-btn svg {
+    margin-right: 8px;
+  }
+  
+  .signin-btn:hover {
+    background-color: rgba(62, 166, 255, 0.1);
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 56px);
+    background-color: white;
+    z-index: 900;
+    overflow-y: auto;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+  }
+  
+  .sidebar-section {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .sidebar-section:last-child {
+    border-bottom: none;
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    text-decoration: none;
+    color: #030303;
+    font-size: 14px;
+  }
+  
+  .sidebar-item svg {
+    margin-right: 24px;
+    font-size: 20px;
+    color: #606060;
+  }
+  
+  .sidebar-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .search-form {
+      display: none;
+    }
+    
+    .header {
+      justify-content: space-between;
+    }
+    
+    .header-right {
+      margin-left: auto;
+    }
+    
+    .sidebar {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo span {
+      display: none;
+    }
+    
+    .youtube-icon {
+      margin-right: 0;
+    }
+    
+    .signin-btn span {
+      display: none;
+    }
+    
+    .sidebar {
+      width: 100%;
+    }
+  }
+  
+  /* Add this to your code to show a mobile search icon when the search bar is hidden */
+  .mobile-search-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #606060;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-search-btn {
+      display: flex;
+    }
+  }
+
+  /* Mobile search toggle */
+@media (max-width: 768px) {
+    .search-form.mobile-active {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      z-index: 1100;
+      background-color: white;
+      padding: 0 16px;
+    }
+    
+    .search-form.mobile-active input {
+      flex: 1;
+    }
+    
+    .search-form.mobile-active + .mobile-search-btn {
+      display: none;
+    }
+    
+    .search-form.mobile-active ~ .header-left,
+    .search-form.mobile-active ~ .header-right {
+      display: none;
+    }
+  }

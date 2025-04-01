@@ -1,0 +1,102 @@
+/* client/src/styles/VideoCard.css */
+.video-card {
+    display: flex;
+    flex-direction: column;
+    width: 320px; /* Adjust width as needed */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .thumbnail-container {
+    position: relative;
+    display: block;
+  }
+  
+  .thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9; /* maintain 16:9 aspect ratio */
+    object-fit: cover;
+  }
+  
+  .duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .live-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: red;
+    color: white;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .video-info {
+    display: flex;
+    padding: 10px;
+  }
+  
+  .channel-img-container {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+  }
+  
+  .channel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .video-title {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: -webkit-box;
+   
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .channel-name {
+    text-decoration: none;
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .video-meta {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 12px;
+  }
+  
+  .dot {
+    margin: 0 4px;
+  }
