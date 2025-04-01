@@ -1,11 +1,31 @@
-// server/routes/auth.js
-const express = require('express');
-const router = express.Router();
-const { registerUser, loginUser, getUserProfile } = require('../controllers/authController');
-const { protect } = require('../middleware/auth');
+// server/middleware/auth.js
+const jwt = require('jsonwebtoken');
+const User = require('../models/User');
 
-router.post('/register', registerUser);
-router.post('/login', loginUser);
-router.get('/profile', protect, getUserProfile);
+const protect = async (req, res, next) => {
+  let token;
 
-module.exports = router;
+  if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+    try {
+      // Get token from header
+      token = req.headers.authorization.split(' ')[1];
+
+      // Verify token
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+      // Get user from the token
+      req.user = await User.findById(decoded.id).select('-password');
+
+      next();
+    } catch (error) {
+      console.error(error);
+      res.status(401).json({ message: 'Not authorized, token failed' });
+    }
+  }
+
+  if (!token) {
+    res.status(401).json({ message: 'Not authorized, no token' });
+  }
+};
+
+module.exports = { protect };
